@@ -16,7 +16,7 @@
  *   See also COPYING, LICENSE and WARRANTY file                           *
  *                                                                         *
  * *********************************************************************** */
-package org.matsim.project;
+package org.matsim.run;
 
 import com.google.inject.internal.asm.$Type;
 import org.matsim.api.core.v01.Id;
@@ -57,7 +57,7 @@ public class RunMatsim{
 
 		Config config;
 		if ( args==null || args.length==0 || args[0]==null ){
-			config = ConfigUtils.loadConfig( "scenarios/equil/config.xml" );
+			config = ConfigUtils.loadConfig( "scenarios/munich/config-munich.xml" );
 		} else {
 			config = ConfigUtils.loadConfig( args );
 		}
