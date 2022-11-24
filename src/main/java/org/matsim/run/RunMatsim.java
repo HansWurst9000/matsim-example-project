@@ -57,13 +57,14 @@ public class RunMatsim{
 
 		Config config;
 		if ( args==null || args.length==0 || args[0]==null ){
-			config = ConfigUtils.loadConfig( "scenarios/munich/config-munich.xml" );
+
+			config = ConfigUtils.loadConfig( "scenarios/munich/output_config_reduced.xml" );
+			//config = ConfigUtils.loadConfig( "scenarios/munich/config-ring.xml" );
 		} else {
 			config = ConfigUtils.loadConfig( args );
 		}
 
 		config.controler().setOverwriteFileSetting( OverwriteFileSetting.deleteDirectoryIfExists );
-
 		// possibly modify config here
 
 		// ---
@@ -75,7 +76,7 @@ public class RunMatsim{
 		// ---
 		
 		Controler controler = new Controler( scenario ) ;
-		
+
 		// possibly modify controler here
 
 //		controler.addOverridingModule( new OTFVisLiveModule() ) ;
